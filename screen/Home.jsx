@@ -1,19 +1,27 @@
-import { View, Text, StatusBar } from 'react-native'
-import React from 'react'
 
-const Home = () => {
+import React from 'react';
+import { View, Text } from 'react-native';
+import {Button} from 'react-native-paper';
+ 
+
+
+const Main = ({navigation}) => {
   return (
     <View>
-        <StatusBar style="auto"  backgroundColor='red'/>
-        <Text>Lets build something rock</Text>
-
-
         
+        <Text>Lets  build something rock</Text>
 
+         <Button textColor="white" style={{backgroundColor:"red"}} >Click me</Button>
+        
+        
       
     </View>
     
   )
 }
 
-export default Home
+const Home = ({navigation}) =>{
+    return <SafeAreaViewAndroid  Component={Main}/>
+}
+
+export default Main
